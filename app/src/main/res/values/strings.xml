@@ -2,6 +2,6 @@
     <string name="app_name">EKG Monitoring</string>
     <string name="labelMeasure">Measure</string>
     <string name="labelActivity">Activity</string>
-    <string name="label_measure">See the measure</string>
+    <string name="label_measure">See the Measure</string>
     <string name="label_activity">See the Activity</string>
 </resources>
