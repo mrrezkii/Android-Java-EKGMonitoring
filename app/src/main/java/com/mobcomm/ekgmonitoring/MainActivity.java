@@ -1,5 +1,6 @@
 package com.mobcomm.ekgmonitoring;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -12,28 +13,32 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.mobcomm.ekgmonitoring.Fragment.ActivityFragment;
 import com.mobcomm.ekgmonitoring.Fragment.MeasureFragment;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.customBottomBar)
     CurveBottomBar cbb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
         initView();
     }
 
     private void initView() {
         loadFragment(new MeasureFragment());
-
-        cbb = findViewById(R.id.customBottomBar);
         cbb.inflateMenu(R.menu.bottom_menu);
         cbb.setItemIconTintList(null);
         cbb.setOnNavigationItemSelectedListener(this);
-
     }
 
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         Fragment fragment = null;

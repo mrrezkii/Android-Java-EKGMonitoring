@@ -45,4 +45,8 @@ dependencies {
 
     // Curve Bottom Bar
     implementation 'com.github.Akshay-Katariya:CurveBottomBar:1.0'
+
+    // Butter knife
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
 }
