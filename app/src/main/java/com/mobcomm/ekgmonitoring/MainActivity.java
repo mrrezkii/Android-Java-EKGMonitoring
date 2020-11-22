@@ -3,6 +3,7 @@ package com.mobcomm.ekgmonitoring;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +22,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.customBottomBar)
     CurveBottomBar cbb;
+
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.tvLabelSection)
+    TextView tvLabelSection;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,9 +50,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         switch (menuItem.getItemId()) {
             case R.id.action_measure:
                 fragment = new MeasureFragment();
+                tvLabelSection.setText(R.string.label_measure);
                 break;
             case R.id.action_activity:
                 fragment = new ActivityFragment();
+                tvLabelSection.setText(R.string.label_activity);
                 break;
         }
         return loadFragment(fragment);
