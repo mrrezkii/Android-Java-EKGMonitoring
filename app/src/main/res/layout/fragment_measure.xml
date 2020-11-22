@@ -3,13 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment.ActivityFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Measure Section"
-        android:textSize="30sp" />
+    <com.dinuscxj.progressbar.CircleProgressBar
+        android:id="@+id/cpBPMLevel"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_very_large"
+        app:line_count="30"
+        app:line_width="4dp"
+        app:progress_background_color="@color/colorGrey"
+        app:progress_end_color="@color/colorAccent"
+        app:progress_shader="sweep"
+        app:progress_start_color="@color/colorAccent"
+        app:progress_stroke_cap="round"
+        app:progress_stroke_width="4dp"
+        app:progress_style="solid_line"
+        app:progress_text_color="@color/colorBlack"
+        app:progress_text_size="40sp" />
 
 </RelativeLayout>
