@@ -4,4 +4,10 @@
     <string name="labelActivity">Activity</string>
     <string name="label_measure">See the Measure</string>
     <string name="label_activity">See the Activity</string>
+    <string name="label_finger">Place finger in device</string>
+    <string name="label_min">Min</string>
+    <string name="label_dymanic_bpm_min">14</string>
+    <string name="label_bpm">BPM</string>
+    <string name="label_max">Max</string>
+    <string name="label_dymanic_bpm_max">50</string>
 </resources>
