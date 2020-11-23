@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 tvLabelSection.setText(R.string.label_measure);
                 break;
             case R.id.action_activity:
-                fragment = new ActivityFragment();
+                fragment = ActivityFragment.newInstance();
                 tvLabelSection.setText(R.string.label_activity);
                 break;
         }
