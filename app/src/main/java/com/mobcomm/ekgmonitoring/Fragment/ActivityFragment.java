@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.components.XAxis;
 import com.mobcomm.ekgmonitoring.R;
 import com.mobcomm.ekgmonitoring.Util.ChartBaseUtil;
 
@@ -31,7 +32,29 @@ public class ActivityFragment extends ChartBaseUtil {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_activity, container, false);
         ButterKnife.bind(this, rootView);
+        initView();
         return rootView;
+    }
+
+    private void initView() {
+        chart.getDescription().setEnabled(false);
+        chart.setMaxVisibleValueCount(60);
+        chart.setPinchZoom(false);
+        chart.setDrawBarShadow(false);
+        chart.setDrawGridBackground(false);
+
+        XAxis xAxis = chart.getXAxis();
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+        xAxis.setDrawGridLines(false);
+
+        chart.getAxisLeft().setDrawGridLines(false);
+        chart.animateY(1500);
+        chart.getLegend().setEnabled(false);
+
+        showChart();
+    }
+
+    private void showChart() {
     }
 
     @Override
