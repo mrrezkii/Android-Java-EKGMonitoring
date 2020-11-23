@@ -10,4 +10,7 @@
     <string name="label_bpm">BPM</string>
     <string name="label_max">Max</string>
     <string name="label_dymanic_bpm_max">50</string>
+    <string name="label_dymanic_bpm_avr">38</string>
+    <string name="label_average">Average</string>
+    <string name="label_total_check">Total check</string>
 </resources>
