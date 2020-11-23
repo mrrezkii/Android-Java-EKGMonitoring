@@ -36,7 +36,6 @@ public class ActivityFragment extends ChartBaseUtil {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_activity, container, false);
         ButterKnife.bind(this, rootView);
         initView();
@@ -63,8 +62,6 @@ public class ActivityFragment extends ChartBaseUtil {
 
     private void showChart() {
         ArrayList<BarEntry> values = new ArrayList<>();
-
-
         for (int i = 1; i <= 50; i++) {
             float val = (float) (Math.random() * 100);
             values.add(new BarEntry(i, val));

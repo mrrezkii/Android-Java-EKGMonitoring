@@ -17,7 +17,7 @@ import com.mobcomm.ekgmonitoring.Fragment.MeasureFragment;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+public class EKGMonitoring extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.customBottomBar)
@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         cbb.setItemIconTintList(null);
         cbb.setOnNavigationItemSelectedListener(this);
     }
-
 
     @SuppressLint("NonConstantResourceId")
     @Override
